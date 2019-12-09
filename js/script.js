@@ -12,9 +12,10 @@ function checkProgress(currProgress, plusValue) {
 }
 
 function writeProgressWidth(currProgress) {
-    $('#my-progress-bar').attr('style', `width: ${currProgress}%;`);
-    $('#my-progress-bar').attr('aria-valuenow', currProgress);
-    $('#my-progress-bar').text(currProgress)
+    $('#my-progress-bar').attr({
+        'style': `width: ${currProgress}%;`,
+        'aria-valuenow': currProgress
+    }).text(currProgress);
 }
 
 function plusOne() {
